@@ -1,0 +1,137 @@
+/* Body & Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0c27b, #4b1248); /* aesthetic gradient */
+}
+
+/* Login container */
+.login-container {
+  background: #2a2a3d; /* new beautiful color */
+  padding: 50px 40px;
+  border-radius: 30px; /* more rounded container */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  width: 380px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease, box-shadow 0.3s ease, background 0.3s ease;
+  perspective: 1000px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Header */
+.login-container h2 {
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px #ff6ec7, 0 0 30px #18ffff;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Input group */
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 15px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 15px; /* more rounded inputs */
+  backdrop-filter: blur(5px);
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #ff6ec7;
+  box-shadow: 0 0 10px #ff6ec7, 0 0 20px #ff6ec7;
+  transform: scale(1.02); /* subtle pop animation */
+}
+
+.input-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 12px;
+  color: #ff6ec7;
+  text-shadow: 0 0 5px #ff6ec7;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.neon-btn {
+  width: 48%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #ff6ec7;
+  color: #fff;
+  box-shadow: 0 0 5px #ff6ec7, 0 0 15px #ff6ec7, 0 0 30px #ff6ec7;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  background: #ff85d4;
+  box-shadow: 0 0 20px #ff85d4, 0 0 40px #ff85d4, 0 0 60px #ff85d4;
+  transform: scale(1.05);
+}
+
+/* Google Neon Red Button */
+.google-login {
+  margin-top: 10px;
+}
+
+.neon-red-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #ff0000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+  transition: all 0.3s ease;
+}
+
+.neon-red-btn:hover {
+  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d, 0 0 60px #ff4d4d;
+  background: #ff1a1a;
+  transform: scale(1.03);
+}
+
+/* Cool fadeIn animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
